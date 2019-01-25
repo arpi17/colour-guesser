@@ -1,15 +1,27 @@
 import React from 'react'
 
 function InputField(props) {
+  const sliderStyle = {
+    appearance: "none",
+    backgroundColor: "red"
+  }
+
   return (
     <div>
+      <label>{props.color.charAt(0).toUpperCase()}</label>
       <input 
-        type="number" 
+        type="range" 
         min="0" 
         max="255"
+        style={sliderStyle}
         value={props.guess}
-        onChange={e => props.onChange(e, props.color)}
-      />{props.color.charAt(0).toUpperCase()}
+        onChange={e => {
+          if(!props.guessed) {
+            props.onChange(e, props.color)}
+          }
+        }
+      />
+      <span>{props.guess}</span>
     </div>
   )
 }
