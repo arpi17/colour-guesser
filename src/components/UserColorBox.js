@@ -11,10 +11,12 @@ function UserColorBox(props) {
   }
 
   return (
-    <div 
-      style={userColorBox}
-      className="color-box"
-    >
+    <div>
+      <h3 style={{textAlign: "center", visibility: props.guessed ? "visible" : "hidden"}}>Your Guess</h3>
+      <div 
+        style={userColorBox}
+        className="color-box"
+      />
     </div>
   )
 }

@@ -55,7 +55,6 @@ class Game extends React.Component {
         score: 0,
       })
     }
-    
   }
 
   evalGuess() {
@@ -89,7 +88,6 @@ class Game extends React.Component {
           color={this.state.color}
           randomColor={this.randomColor}
         />
-        <br/>
         <UserInputs
           color={this.state.color}
           guess={this.state.guess}

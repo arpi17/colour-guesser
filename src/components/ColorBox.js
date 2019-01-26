@@ -14,10 +14,13 @@ class ColorBox extends React.Component {
     }
 
     return (
-      <div 
-        style={colorBox}
-        className="color-box"
-      />
+      <div>
+        <h3 style={{textAlign: "center"}}>Target</h3>
+        <div 
+          style={colorBox}
+          className="color-box"
+        />
+      </div>
     )
   }
 }

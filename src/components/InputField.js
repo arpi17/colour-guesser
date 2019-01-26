@@ -21,7 +21,7 @@ function InputField(props) {
           }
         }
       />
-      <span>{props.guess}</span>
+      <span className="current-color-value">{props.guess}</span>
     </div>
   )
 }

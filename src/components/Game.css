@@ -8,4 +8,10 @@
 
 .slider-area {
   width: 200px;
+  text-align: center;
+}
+
+.current-color-value {
+  display: inline-block;
+  width: 30px;
 }
