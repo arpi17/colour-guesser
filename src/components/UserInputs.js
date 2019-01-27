@@ -1,7 +1,6 @@
 import React from 'react';
 
 import InputField from './InputField.js';
-import ScoreBoard from './ScoreBoard.js';
 
 function UserInputs(props) {
   return (
@@ -33,15 +32,13 @@ function UserInputs(props) {
         >
         Submit guess
       </button>
-
-      {props.guessed &&
-        <ScoreBoard
-          color={props.color} 
-          guess={props.guess}
-          score={props.score}
-          onClick={props.onClick}
-        />
-      }
+      <br/>
+      <button
+        style={{visibility: props.guessed ? "visible" : "hidden"}}
+        onClick={props.onClick}
+        >
+        Play again!
+      </button>
     </div>
   )
 }

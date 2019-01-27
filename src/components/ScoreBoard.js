@@ -3,7 +3,6 @@ import React from 'react'
 function ScoreBoard(props) {
   return (
     <div>
-      {/* <h1>Score Board</h1>
       <h2>Your Score is {props.score}</h2>
       <table>
         <tbody>
@@ -28,10 +27,7 @@ function ScoreBoard(props) {
             <td>{props.guess.blue}</td>
           </tr>
         </tbody>
-      </table> */}
-      <button onClick={props.onClick}>
-        Play again!
-      </button>
+      </table>
     </div>
   )
 }

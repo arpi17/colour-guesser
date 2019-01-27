@@ -3,6 +3,7 @@ import React from 'react';
 import ColorBox from './ColorBox';
 import UserColorBox from './UserColorBox.js';
 import UserInputs from './UserInputs.js';
+import ScoreBoard from './ScoreBoard.js';
 import './Game.css';
 
 class Game extends React.Component {
@@ -19,9 +20,9 @@ class Game extends React.Component {
         blue: ''
       },
       guess: {
-        red: '',
-        green: '',
-        blue: ''
+        red: 0,
+        green: 0,
+        blue: 0
       },
       guessed: false,
       score: 0
@@ -83,23 +84,33 @@ class Game extends React.Component {
   
   render() {
     return (
-      <div className="game">
-        <ColorBox
-          color={this.state.color}
-          randomColor={this.randomColor}
-        />
-        <UserInputs
-          color={this.state.color}
+      <div>
+        <div className="game">
+          <ColorBox
+            color={this.state.color}
+            randomColor={this.randomColor}
+          />
+          <UserInputs
+            color={this.state.color}
+            guess={this.state.guess}
+            guessed={this.state.guessed}
+            score={this.state.score}
+            onChange={this.handleChange}
+            onClick={this.handleClick}
+          />
+          <UserColorBox
+            color={this.state.guess}
+            guessed={this.state.guessed}
+          />
+        </div>
+        {this.state.guessed &&
+        <ScoreBoard
+          color={this.state.color} 
           guess={this.state.guess}
-          guessed={this.state.guessed}
           score={this.state.score}
-          onChange={this.handleChange}
           onClick={this.handleClick}
         />
-        <UserColorBox
-          color={this.state.guess}
-          guessed={this.state.guessed}
-        />
+      }
       </div>
     )
   }

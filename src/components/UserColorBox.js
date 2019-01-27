@@ -3,9 +3,9 @@ import React from 'react'
 function UserColorBox(props) {
   let {red, green, blue} = props.color;
   const userColorBox = {
-    width: "200px",
-    height: "200px",
-    borderRadius: "5px",
+    width: "250px",
+    height: "250px",
+    borderRadius: "20px",
     backgroundColor: `rgb(${red}, ${green}, ${blue})`,
     visibility: props.guessed ? "visible" : "hidden"
   }

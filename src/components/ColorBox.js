@@ -7,9 +7,9 @@ class ColorBox extends React.Component {
   render() {
     let {red, green, blue} = this.props.color;
     const colorBox = {
-      width: "200px",
-      height: "200px",
-      borderRadius: "5px",
+      width: "250px",
+      height: "250px",
+      borderRadius: "20px",
       backgroundColor: `rgb(${red}, ${green}, ${blue})`
     }
 
