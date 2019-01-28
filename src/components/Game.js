@@ -87,6 +87,7 @@ class Game extends React.Component {
       <div>
         <div className="game">
           <ColorBox
+            mode={this.props.mode}
             color={this.state.color}
             randomColor={this.randomColor}
           />
@@ -94,7 +95,7 @@ class Game extends React.Component {
             color={this.state.color}
             guess={this.state.guess}
             guessed={this.state.guessed}
-            score={this.state.score}
+            // score={this.state.score}
             onChange={this.handleChange}
             onClick={this.handleClick}
           />
