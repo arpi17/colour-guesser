@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Description from './components/layout/Description';
 import Game from './components/Game';
 import Intro from './components/Intro';
+import './App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -24,27 +24,31 @@ class App extends React.Component {
   }
 
   render () {
-    let element;
+    let Screen;
     switch (this.state.mode) {
       case "game":
-        element = <Game mode={this.state.mode}/>;
+        Screen = <Game mode={this.state.mode}/>;
         break;
       case "intro":
-        element = <Intro mode={this.state.mode}/>;
+        Screen = <Intro mode={this.state.mode}/>;
         break;
       default:
-        element = <Intro mode={this.state.mode}/>;
+        Screen = <Intro mode={this.state.mode}/>;
         break;
     }
+
     return (
       <div>
-        <Description />
-        {element}
-        <button 
-          onClick={this.changeMode}
-        >
-          {this.state.mode === "intro" ? "Play!" : "Practice more"}
-        </button>
+        <h1>RGB color guesser</h1>
+        {Screen}
+        <div className="mode-button-container">
+          <button
+            id="mode-button"
+            onClick={this.changeMode}
+          >
+            {this.state.mode === "intro" ? "Play!" : "Practice more"}
+          </button>
+        </div>
       </div>
     );
   }

@@ -95,7 +95,6 @@ class Game extends React.Component {
             color={this.state.color}
             guess={this.state.guess}
             guessed={this.state.guessed}
-            // score={this.state.score}
             onChange={this.handleChange}
             onClick={this.handleClick}
           />

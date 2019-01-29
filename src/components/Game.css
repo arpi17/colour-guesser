@@ -9,12 +9,13 @@
 .color-box {
   width: 250px;
   height: 250px;
-  border-radius: 20px;
+  border-radius: 35px;
 }
 
 .slider-area {
-  width: 200px;
+  width: 250px;
   text-align: center;
+  margin-top: 35px;
 }
 
 .current-color-value {
@@ -29,4 +30,12 @@ button {
   border-radius: 10px;
   outline: none;
   margin: auto;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input[type="range"] {
+  cursor: pointer;
 }

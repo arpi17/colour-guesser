@@ -8,7 +8,9 @@ function InputField(props) {
 
   return (
     <div>
-      <label>{props.color.charAt(0).toUpperCase()}</label>
+      <label className="current-color-value">
+        {props.color.charAt(0).toUpperCase()}
+      </label>
       <input 
         type="range" 
         min="0" 
