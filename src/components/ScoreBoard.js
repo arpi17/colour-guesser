@@ -2,9 +2,11 @@ import React from 'react'
 
 function ScoreBoard(props) {
   return (
-    <div>
-      <h2>Your Score is {props.score}</h2>
-      <table>
+    <div
+      className="score"
+      style={{visibility: props.guessed ? "visible" : "hidden"}}>
+      <h2>Score: {props.score}%</h2>
+      {/* <table>
         <tbody>
           <tr>
             <th></th>
@@ -27,7 +29,7 @@ function ScoreBoard(props) {
             <td>{props.guess.blue}</td>
           </tr>
         </tbody>
-      </table>
+      </table> */}
     </div>
   )
 }

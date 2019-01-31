@@ -65,7 +65,7 @@ class Game extends React.Component {
         sqrSum += Math.pow(this.state.color[color] - this.state.guess[color] ,2);
       }
     }
-    return Math.sqrt(sqrSum);
+    return (100 - (100 / Math.sqrt(3 * Math.pow(256,2))) * Math.sqrt(sqrSum)).toFixed(2);
   }
 
   randomColor = () => {
@@ -85,6 +85,13 @@ class Game extends React.Component {
   render() {
     return (
       <div>
+        <ScoreBoard
+          color={this.state.color} 
+          guess={this.state.guess}
+          guessed={this.state.guessed}
+          score={this.state.score}
+          onClick={this.handleClick}
+        />
         <div className="game">
           <ColorBox
             mode={this.props.mode}
@@ -103,14 +110,6 @@ class Game extends React.Component {
             guessed={this.state.guessed}
           />
         </div>
-        {this.state.guessed &&
-        <ScoreBoard
-          color={this.state.color} 
-          guess={this.state.guess}
-          score={this.state.score}
-          onClick={this.handleClick}
-        />
-      }
       </div>
     )
   }
