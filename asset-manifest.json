@@ -1,13 +1,13 @@
 {
-  "main.css": "/arpi17/rgb-guesser/static/css/main.53030826.chunk.css",
-  "main.js": "/arpi17/rgb-guesser/static/js/main.8df7e18c.chunk.js",
-  "main.js.map": "/arpi17/rgb-guesser/static/js/main.8df7e18c.chunk.js.map",
-  "static/js/1.91871e58.chunk.js": "/arpi17/rgb-guesser/static/js/1.91871e58.chunk.js",
-  "static/js/1.91871e58.chunk.js.map": "/arpi17/rgb-guesser/static/js/1.91871e58.chunk.js.map",
-  "runtime~main.js": "/arpi17/rgb-guesser/static/js/runtime~main.6629fe80.js",
-  "runtime~main.js.map": "/arpi17/rgb-guesser/static/js/runtime~main.6629fe80.js.map",
-  "static/css/main.53030826.chunk.css.map": "/arpi17/rgb-guesser/static/css/main.53030826.chunk.css.map",
-  "index.html": "/arpi17/rgb-guesser/index.html",
-  "precache-manifest.72851aad1d254c0db4dedff989f4e7dc.js": "/arpi17/rgb-guesser/precache-manifest.72851aad1d254c0db4dedff989f4e7dc.js",
-  "service-worker.js": "/arpi17/rgb-guesser/service-worker.js"
+  "main.css": "/rgb-guesser/static/css/main.53030826.chunk.css",
+  "main.js": "/rgb-guesser/static/js/main.8df7e18c.chunk.js",
+  "main.js.map": "/rgb-guesser/static/js/main.8df7e18c.chunk.js.map",
+  "static/js/1.91871e58.chunk.js": "/rgb-guesser/static/js/1.91871e58.chunk.js",
+  "static/js/1.91871e58.chunk.js.map": "/rgb-guesser/static/js/1.91871e58.chunk.js.map",
+  "runtime~main.js": "/rgb-guesser/static/js/runtime~main.dea0ca08.js",
+  "runtime~main.js.map": "/rgb-guesser/static/js/runtime~main.dea0ca08.js.map",
+  "static/css/main.53030826.chunk.css.map": "/rgb-guesser/static/css/main.53030826.chunk.css.map",
+  "index.html": "/rgb-guesser/index.html",
+  "precache-manifest.67ea994fa8dc154e8bed02d9357b2e62.js": "/rgb-guesser/precache-manifest.67ea994fa8dc154e8bed02d9357b2e62.js",
+  "service-worker.js": "/rgb-guesser/service-worker.js"
 }

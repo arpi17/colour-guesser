@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/arpi17/rgb-guesser/precache-manifest.72851aad1d254c0db4dedff989f4e7dc.js"
+  "/rgb-guesser/precache-manifest.67ea994fa8dc154e8bed02d9357b2e62.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/arpi17/rgb-guesser/index.html", {
+workbox.routing.registerNavigationRoute("/rgb-guesser/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
