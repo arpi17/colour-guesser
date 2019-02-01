@@ -1,7 +1,7 @@
 {
   "name": "rgb_color_guesser",
   "version": "0.1.0",
-  "homepage": "https://github.com/arpi17/rgb-guesser",
+  "homepage": "https://arpi17.github.io/rgb-guesser",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
@@ -14,7 +14,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
