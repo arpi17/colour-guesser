@@ -26,13 +26,17 @@ function UserInputs(props) {
 
       <br/>
 
-      <div
-        className="buttons-container"
-        style={{display: props.mode === "intro" ? "none" : "block"}}>
+      <div style={{display: props.mode === "intro" ? "none" : "block"}}>
         <button onClick={props.onClick} >
           {props.guessed ? "Play again!" : "Submit guess"}
         </button>
       </div>
+
+      <span
+        className="action-text"
+        style={{display: props.mode !== "intro" ? "none" : "block"}}>
+        Change me!
+      </span>
     </div>
   )
 }

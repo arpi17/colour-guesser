@@ -11,6 +11,24 @@
   font-size: 20px;
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px; 
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.action-text {
+  font-weight: bold;
 }
