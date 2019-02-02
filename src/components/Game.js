@@ -25,7 +25,8 @@ class Game extends React.Component {
         blue: 0
       },
       guessed: false,
-      score: 0
+      score: 0,
+      highScore: 0  //TODO: if you want highscore to persist lift it to App state!
     }
   }
 
@@ -54,6 +55,12 @@ class Game extends React.Component {
         },
         guessed: !this.state.guessed,
         score: 0,
+      })
+    }
+    // Set highscore
+    if (this.state.score > this.state.highScore) {
+      this.setState({
+        highScore: this.state.score
       })
     }
   }
@@ -90,6 +97,7 @@ class Game extends React.Component {
           guess={this.state.guess}
           guessed={this.state.guessed}
           score={this.state.score}
+          highScore={this.state.highScore}
           onClick={this.handleClick}
         />
         <div className="game">
