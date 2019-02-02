@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/rgb-guesser/static/js/runtime~main.dea0ca08.js"
   },
   {
-    "revision": "8df7e18c74d93b5ac357",
-    "url": "/rgb-guesser/static/js/main.8df7e18c.chunk.js"
+    "revision": "e25d699e18b8fa84f1b8",
+    "url": "/rgb-guesser/static/js/main.e25d699e.chunk.js"
   },
   {
     "revision": "91871e58da4b4cc3e19e",
     "url": "/rgb-guesser/static/js/1.91871e58.chunk.js"
   },
   {
-    "revision": "8df7e18c74d93b5ac357",
-    "url": "/rgb-guesser/static/css/main.53030826.chunk.css"
+    "revision": "e25d699e18b8fa84f1b8",
+    "url": "/rgb-guesser/static/css/main.f787cf36.chunk.css"
   },
   {
-    "revision": "1d5fa82cd8397afa7f9400b830f1c9b5",
+    "revision": "11b7286f6704e122fe2a488c5d25def0",
     "url": "/rgb-guesser/index.html"
   }
 ];

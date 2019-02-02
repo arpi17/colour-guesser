@@ -1,13 +1,13 @@
 {
-  "main.css": "/rgb-guesser/static/css/main.53030826.chunk.css",
-  "main.js": "/rgb-guesser/static/js/main.8df7e18c.chunk.js",
-  "main.js.map": "/rgb-guesser/static/js/main.8df7e18c.chunk.js.map",
+  "main.css": "/rgb-guesser/static/css/main.f787cf36.chunk.css",
+  "main.js": "/rgb-guesser/static/js/main.e25d699e.chunk.js",
+  "main.js.map": "/rgb-guesser/static/js/main.e25d699e.chunk.js.map",
   "static/js/1.91871e58.chunk.js": "/rgb-guesser/static/js/1.91871e58.chunk.js",
   "static/js/1.91871e58.chunk.js.map": "/rgb-guesser/static/js/1.91871e58.chunk.js.map",
   "runtime~main.js": "/rgb-guesser/static/js/runtime~main.dea0ca08.js",
   "runtime~main.js.map": "/rgb-guesser/static/js/runtime~main.dea0ca08.js.map",
-  "static/css/main.53030826.chunk.css.map": "/rgb-guesser/static/css/main.53030826.chunk.css.map",
+  "static/css/main.f787cf36.chunk.css.map": "/rgb-guesser/static/css/main.f787cf36.chunk.css.map",
   "index.html": "/rgb-guesser/index.html",
-  "precache-manifest.67ea994fa8dc154e8bed02d9357b2e62.js": "/rgb-guesser/precache-manifest.67ea994fa8dc154e8bed02d9357b2e62.js",
+  "precache-manifest.6fbbc0ef1e28ac1bfeb1f3acf7f994f8.js": "/rgb-guesser/precache-manifest.6fbbc0ef1e28ac1bfeb1f3acf7f994f8.js",
   "service-worker.js": "/rgb-guesser/service-worker.js"
 }
