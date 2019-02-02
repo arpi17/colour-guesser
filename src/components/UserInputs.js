@@ -26,21 +26,11 @@ function UserInputs(props) {
 
       <br/>
 
-      <div 
+      <div
         className="buttons-container"
         style={{display: props.mode === "intro" ? "none" : "block"}}>
-        <button 
-          type="submit"
-          onClick={props.onClick}
-          >
-          Submit guess
-        </button>
-        <br/>
-        <button
-          style={{visibility: props.guessed ? "visible" : "hidden"}}
-          onClick={props.onClick}
-          >
-          Play again!
+        <button onClick={props.onClick} >
+          {props.guessed ? "Play again!" : "Submit guess"}
         </button>
       </div>
     </div>
