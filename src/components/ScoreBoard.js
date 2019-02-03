@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function ScoreBoard(props) {
   return (
@@ -35,6 +36,11 @@ function ScoreBoard(props) {
       </table> */}
     </div>
   )
+}
+
+ScoreBoard.propTypes = {
+  highScore: PropTypes.number.isRequired,
+  score: PropTypes.number.isRequired
 }
 
 export default ScoreBoard

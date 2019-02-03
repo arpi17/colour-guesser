@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import InputField from './InputField.js';
 
@@ -39,6 +40,18 @@ function UserInputs(props) {
       </span>
     </div>
   )
+}
+
+UserInputs.propTypes = {
+  guess: PropTypes.shape({
+    red: PropTypes.number,
+    green: PropTypes.number,
+    blue: PropTypes.number
+  }).isRequired,
+  guessed: PropTypes.bool,
+  onClick: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  mode: PropTypes.string.isRequired
 }
 
 export default UserInputs;

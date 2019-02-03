@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function InputField(props) {
   const sliderStyle = {
-    appearance: "none",
-    backgroundColor: "red"
+    appearance: "none"
   }
 
   return (
@@ -26,6 +26,13 @@ function InputField(props) {
       <span className="current-color-value">{props.guess}</span>
     </div>
   )
+}
+
+InputField.propTypes = {
+  color: PropTypes.string.isRequired,
+  guess: PropTypes.number.isRequired,
+  guessed: PropTypes.bool,  // Cannot be required since `guessed` is not defined in "intro" mode
+  onChange: PropTypes.func.isRequired
 }
 
 export default InputField

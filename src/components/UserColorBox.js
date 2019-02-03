@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function UserColorBox(props) {
   let {red, green, blue} = props.color;
@@ -16,6 +17,15 @@ function UserColorBox(props) {
       />
     </div>
   )
+}
+
+UserColorBox.propTypes = {
+  color: PropTypes.shape({
+    red: PropTypes.number,
+    green: PropTypes.number,
+    blue: PropTypes.number,
+  }).isRequired,
+  guessed: PropTypes.bool.isRequired
 }
 
 export default UserColorBox

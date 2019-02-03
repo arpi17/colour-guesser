@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ColorBox extends React.Component {
   componentDidMount() {
@@ -22,6 +23,16 @@ class ColorBox extends React.Component {
       </div>
     )
   }
+}
+
+ColorBox.propTypes = {
+  color: PropTypes.shape({
+    red: PropTypes.number.isRequired,
+    green: PropTypes.number.isRequired,
+    blue: PropTypes.number.isRequired
+  }).isRequired,
+  randomColor: PropTypes.func,
+  mode: PropTypes.string.isRequired
 }
 
 export default ColorBox;

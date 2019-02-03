@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import ColorBox from './ColorBox.js'
+import ColorBox from './ColorBox.js';
 import UserInputs from './UserInputs.js';
-import './Intro.css'
+import './Intro.css';
 
 class Intro extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class Intro extends React.Component {
     this.setState({
       color: {
         ...this.state.color,
-        [color]: e.target.value
+        [color]: parseInt(e.target.value)
       }
     })
   }
@@ -64,6 +65,10 @@ class Intro extends React.Component {
       </div>
     )
   }
+}
+
+Intro.propTypes = {
+  mode: PropTypes.string.isRequired
 }
 
 export default Intro

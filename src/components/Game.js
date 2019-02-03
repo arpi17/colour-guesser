@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import ColorBox from './ColorBox';
 import UserColorBox from './UserColorBox.js';
@@ -15,9 +16,9 @@ class Game extends React.Component {
 
     this.state = {
       color: {
-        red: '',
-        green: '',
-        blue: ''
+        red: 0,
+        green: 0,
+        blue: 0
       },
       guess: {
         red: 0,
@@ -34,7 +35,7 @@ class Game extends React.Component {
     this.setState({
       guess: {
         ...this.state.guess,
-        [color]: e.target.value
+        [color]: parseInt(e.target.value)
       }
     })
   }
@@ -72,7 +73,7 @@ class Game extends React.Component {
         sqrSum += Math.pow(this.state.color[color] - this.state.guess[color] ,2);
       }
     }
-    return (100 - (100 / Math.sqrt(3 * Math.pow(256,2))) * Math.sqrt(sqrSum)).toFixed(2);
+    return parseFloat((100 - (100 / Math.sqrt(3 * Math.pow(256,2))) * Math.sqrt(sqrSum)).toFixed(2));
   }
 
   randomColor = () => {
@@ -102,11 +103,12 @@ class Game extends React.Component {
         />
         <div className="game">
           <ColorBox
-            mode={this.props.mode}
+            mode={this.props.mode} // TODO move props.mode to Context API
             color={this.state.color}
             randomColor={this.randomColor}
           />
           <UserInputs
+            mode={this.props.mode}
             color={this.state.color}
             guess={this.state.guess}
             guessed={this.state.guessed}
@@ -121,6 +123,10 @@ class Game extends React.Component {
       </div>
     )
   }
+}
+
+Game.propTypes = {
+  mode: PropTypes.string.isRequired
 }
 
 export default Game;
