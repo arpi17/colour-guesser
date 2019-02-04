@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/rgb-guesser/precache-manifest.6fbbc0ef1e28ac1bfeb1f3acf7f994f8.js"
+  "/rgb-guesser/precache-manifest.57b9f630547f9e096e493c8502134818.js"
 );
 
 workbox.clientsClaim();
