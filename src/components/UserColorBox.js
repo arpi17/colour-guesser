@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function UserColorBox(props) {
-  let {red, green, blue} = props.color;
+function UserColorBox({ color: {red, green, blue}, guessed }) {
   const userColorBox = {
     backgroundColor: `rgb(${red}, ${green}, ${blue})`,
-    visibility: props.guessed ? "visible" : "hidden"
+    visibility: guessed ? "visible" : "hidden"
   }
 
   return (
     <div>
-      <h3 style={{textAlign: "center", visibility: props.guessed ? "visible" : "hidden"}}>Your Guess</h3>
+      <h3 style={{textAlign: "center", visibility: guessed ? "visible" : "hidden"}}>Your Guess</h3>
       <div 
         style={userColorBox}
         className="color-box"

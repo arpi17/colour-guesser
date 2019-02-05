@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ScoreBoard(props) {
+function ScoreBoard({ highScore, score, guessed }) {
   return (
     <div className="score">
-      <h2 style={{visibility: props.highScore ? "visible" : "hidden"}}>
-        Best: {props.highScore}%
+      <h2 style={{visibility: highScore ? "visible" : "hidden"}}>
+        Best: {highScore}%
       </h2>
-      <h2 style={{visibility: props.guessed ? "visible" : "hidden"}}>
-        Score: {props.score}%
+      <h2 style={{visibility: guessed ? "visible" : "hidden"}}>
+        Score: {score}%
       </h2>
       {/* <table>
         <tbody>

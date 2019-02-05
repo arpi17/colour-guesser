@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function InputField(props) {
+function InputField({ color, guess, guessed, onChange }) {
   const sliderStyle = {
     appearance: "none"
   }
@@ -9,21 +9,21 @@ function InputField(props) {
   return (
     <div>
       <label className="current-color-value">
-        {props.color.charAt(0).toUpperCase()}
+        {color.charAt(0).toUpperCase()}
       </label>
       <input 
         type="range" 
         min="0" 
         max="255"
         style={sliderStyle}
-        value={props.guess}
+        value={guess}
         onChange={e => {
-          if(!props.guessed) {
-            props.onChange(e, props.color)}
+          if(!guessed) {
+            onChange(e, color)}
           }
         }
       />
-      <span className="current-color-value">{props.guess}</span>
+      <span className="current-color-value">{guess}</span>
     </div>
   )
 }

@@ -3,39 +3,39 @@ import PropTypes from 'prop-types';
 
 import InputField from './InputField.js';
 
-function UserInputs(props) {
+function UserInputs({ mode, guess, guessed, onChange, onClick}) {
   return (
     <div className="slider-area">
       <InputField 
         color='red' 
-        guess={props.guess.red}
-        guessed={props.guessed}
-        onChange={props.onChange} 
+        guess={guess.red}
+        guessed={guessed}
+        onChange={onChange} 
       />
       <InputField 
         color='green' 
-        guess={props.guess.green}
-        guessed={props.guessed}
-        onChange={props.onChange}
+        guess={guess.green}
+        guessed={guessed}
+        onChange={onChange}
       />
       <InputField 
         color='blue' 
-        guess={props.guess.blue}
-        guessed={props.guessed} 
-        onChange={props.onChange}
+        guess={guess.blue}
+        guessed={guessed} 
+        onChange={onChange}
       />
 
       <br/>
 
-      <div style={{display: props.mode === "intro" ? "none" : "block"}}>
-        <button onClick={props.onClick} >
-          {props.guessed ? "Play again!" : "Submit guess"}
+      <div style={{display: mode === "intro" ? "none" : "block"}}>
+        <button onClick={onClick} >
+          {guessed ? "Play again!" : "Submit guess"}
         </button>
       </div>
 
       <span
         className="action-text"
-        style={{display: props.mode !== "intro" ? "none" : "block"}}>
+        style={{display: mode !== "intro" ? "none" : "block"}}>
         Change me!
       </span>
     </div>
