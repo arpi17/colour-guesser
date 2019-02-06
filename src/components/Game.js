@@ -11,8 +11,8 @@ class Game extends React.Component {
   constructor(props) {
     super(props)
 
-    this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
 
     this.state = {
       color: {
@@ -26,8 +26,10 @@ class Game extends React.Component {
         blue: 0
       },
       guessed: false,
-      score: 0,
-      highScore: 0  //TODO: if you want highscore to persist lift it to App state!
+      stats: {
+        score: 0,
+        highScore: 0 //TODO: if you want highscore to persist lift it to App state!
+      }
     }
   }
 
@@ -42,9 +44,14 @@ class Game extends React.Component {
 
   handleClick() {
     if (!this.state.guessed) {
+      const newScore = this.evalGuess();
+      const best = this.state.stats.highScore;
       this.setState({
         guessed: !this.state.guessed,
-        score: this.evalGuess()
+        stats: {
+          score: newScore,
+          highScore: newScore > best ? newScore : best
+        }
       })
     } else {
       this.randomColor();
@@ -55,13 +62,10 @@ class Game extends React.Component {
           blue: 0
         },
         guessed: !this.state.guessed,
-        score: 0,
-      })
-    }
-    // Set highscore
-    if (this.state.score > this.state.highScore) {
-      this.setState({
-        highScore: this.state.score
+        stats: {
+          ...this.state.stats,
+          score: 0
+        }
       })
     }
   }
@@ -91,33 +95,34 @@ class Game extends React.Component {
   }
   
   render() {
+    const { color, guess, guessed, stats: {score, highScore} } = this.state;
     return (
       <div>
         <ScoreBoard
-          color={this.state.color} 
-          guess={this.state.guess}
-          guessed={this.state.guessed}
-          score={this.state.score}
-          highScore={this.state.highScore}
+          color={color} 
+          guess={guess}
+          guessed={guessed}
+          score={score}
+          highScore={highScore}
           onClick={this.handleClick}
         />
         <div className="game">
           <ColorBox
             mode={this.props.mode} // TODO move props.mode to Context API
-            color={this.state.color}
+            color={color}
             randomColor={this.randomColor}
           />
           <UserInputs
             mode={this.props.mode}
-            color={this.state.color}
-            guess={this.state.guess}
-            guessed={this.state.guessed}
+            color={color}
+            guess={guess}
+            guessed={guessed}
             onChange={this.handleChange}
             onClick={this.handleClick}
           />
           <UserColorBox
-            color={this.state.guess}
-            guessed={this.state.guessed}
+            color={guess}
+            guessed={guessed}
           />
         </div>
       </div>
