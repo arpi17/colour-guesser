@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import ColorBox from './ColorBox';
 import UserColorBox from './UserColorBox.js';
@@ -9,7 +8,7 @@ import './Game.css';
 
 class Game extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -30,7 +29,7 @@ class Game extends React.Component {
         score: 0,
         highScore: 0 //TODO: if you want highscore to persist lift it to App state!
       }
-    }
+    };
   }
 
   handleChange(e, color) {
@@ -39,7 +38,7 @@ class Game extends React.Component {
         ...this.state.guess,
         [color]: parseInt(e.target.value)
       }
-    })
+    });
   }
 
   handleClick() {
@@ -52,7 +51,7 @@ class Game extends React.Component {
           score: newScore,
           highScore: newScore > best ? newScore : best
         }
-      })
+      });
     } else {
       this.randomColor();
       this.setState({
@@ -66,7 +65,7 @@ class Game extends React.Component {
           ...this.state.stats,
           score: 0
         }
-      })
+      });
     }
   }
 
@@ -74,16 +73,24 @@ class Game extends React.Component {
     let sqrSum = 0;
     for (let color in this.state.color) {
       if (this.state.color.hasOwnProperty(color)) {
-        sqrSum += Math.pow(this.state.color[color] - this.state.guess[color] ,2);
+        sqrSum += Math.pow(
+          this.state.color[color] - this.state.guess[color],
+          2
+        );
       }
     }
-    return parseFloat((100 - (100 / Math.sqrt(3 * Math.pow(256,2))) * Math.sqrt(sqrSum)).toFixed(2));
+    return parseFloat(
+      (
+        100 -
+        (100 / Math.sqrt(3 * Math.pow(256, 2))) * Math.sqrt(sqrSum)
+      ).toFixed(2)
+    );
   }
 
   randomColor = () => {
     function randomNum() {
       return Math.floor(Math.random() * 256);
-    };
+    }
 
     this.setState({
       color: {
@@ -92,14 +99,19 @@ class Game extends React.Component {
         blue: randomNum()
       }
     });
-  }
-  
+  };
+
   render() {
-    const { color, guess, guessed, stats: {score, highScore} } = this.state;
+    const {
+      color,
+      guess,
+      guessed,
+      stats: { score, highScore }
+    } = this.state;
     return (
       <div>
         <ScoreBoard
-          color={color} 
+          color={color}
           guess={guess}
           guessed={guessed}
           score={score}
@@ -107,31 +119,19 @@ class Game extends React.Component {
           onClick={this.handleClick}
         />
         <div className="game">
-          <ColorBox
-            mode={this.props.mode} // TODO move props.mode to Context API
-            color={color}
-            randomColor={this.randomColor}
-          />
+          <ColorBox color={color} randomColor={this.randomColor} />
           <UserInputs
-            mode={this.props.mode}
             color={color}
             guess={guess}
             guessed={guessed}
             onChange={this.handleChange}
             onClick={this.handleClick}
           />
-          <UserColorBox
-            color={guess}
-            guessed={guessed}
-          />
+          <UserColorBox color={guess} guessed={guessed} />
         </div>
       </div>
-    )
+    );
   }
-}
-
-Game.propTypes = {
-  mode: PropTypes.string.isRequired
 }
 
 export default Game;
