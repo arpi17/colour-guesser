@@ -25,28 +25,27 @@ class App extends React.Component {
 
   render() {
     const { intro, game } = modes;
-    let Screen;
-    switch (this.state.mode) {
-      case game:
-        Screen = <Game />;
-        break;
-      default:
-        Screen = <Intro />;
-        break;
-    }
-
     return (
-      <div>
-        <h1>RGB color guesser</h1>
-        <ModeContext.Provider value={this.state.mode}>
-          {Screen}
-        </ModeContext.Provider>
-        <div className="mode-button-container">
-          <button id="mode-button" onClick={this.changeMode}>
-            {this.state.mode === intro ? 'Play!' : 'Practice more'}
-          </button>
+      <ModeContext.Provider value={this.state.mode}>
+        <div>
+          <h1>RGB color guesser</h1>
+          <ModeContext.Consumer>
+            {value => {
+              switch (value) {
+                case game:
+                  return <Game />;
+                default:
+                  return <Intro />;
+              }
+            }}
+          </ModeContext.Consumer>
+          <div className="mode-button-container">
+            <button id="mode-button" onClick={this.changeMode}>
+              {this.state.mode === intro ? 'Play!' : 'Practice more'}
+            </button>
+          </div>
         </div>
-      </div>
+      </ModeContext.Provider>
     );
   }
 }
