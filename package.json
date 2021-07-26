@@ -1,7 +1,7 @@
 {
   "name": "rgb_guesser",
   "version": "0.1.0",
-  "homepage": "https://arpi17.github.io/rgb-guesser",
+  "homepage": "https://arpi17.github.io/colour-guesser",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
